@@ -1,28 +1,24 @@
 # Frugal Testing — Landing Page
 
-A single-file, ads-ready landing page (`index.html`) designed to convert paid-traffic visitors into booked QA consultations. No build step — open the file directly in a browser.
+A single-file landing page (`index.html`) with a working date-picker booking widget, animated live-dashboard hero mockup, real client logos/case studies, and scroll-triggered reveal animations. No build step — open the file directly in a browser.
 
-## Design approach
+## Animations
 
-- **One primary conversion goal**: every section pushes toward the Calendly booking widget at the bottom (message match for ad campaigns — keep ad copy and hero headline aligned).
-- **Above-the-fold clarity**: value proposition, proof stats, and a CTA are visible without scrolling.
-- **Low friction**: no signup forms or gated content — booking a call is one click away.
-- **Lightweight by design**: no JS framework, no icon library dependency (icons are inline SVG), FAQ accordion and mobile nav use native HTML/CSS (`<details>` + checkbox toggle) instead of JavaScript.
-- **Social proof**: stats bar, testimonials, and industry chips build trust before the ask.
+All motion respects `prefers-reduced-motion` (the existing blanket rule near the top of `<style>` disables every `animation`/`transition` for users who ask for reduced motion).
 
-## Before publishing — replace these placeholders
+- **Hero** — eyebrow, headline, subhead, copy, CTAs, and stat row fade/slide in on load in sequence (`hu` keyframe, staggered `animation-delay`). The dashboard card follows, then its own contents populate in turn: the progress bar fills 0→78% (`fb` keyframe), the three metric tiles pop in, then the four test rows, then the severity/flow strip.
+- **Trust bar** — the client-logo row (`.lg`) is duplicated via JS and scrolls in a seamless infinite marquee (`mq` keyframe); hovering pauses it.
+- **Problem section** — the four problem cards, the heading, and the closing pull-quote fade up on scroll with a staggered delay (`.rv`/`.rv.in`, driven by an `IntersectionObserver`). The red/amber highlight inside each card's code snippet pulses gently to draw the eye (`sp` keyframe).
+- **Process timeline** — the connecting line draws left-to-right (`scaleX`) as the section scrolls into view, and each of the five step markers pops in with a slight overshoot, staggered in sequence.
 
-Network access to frugaltesting.com and forbes.com was blocked in the session that built this page, so the following were written from general knowledge of the industry/company and **must be verified or swapped**:
+The scroll-reveal mechanism reuses the same `IntersectionObserver` pattern already used for the animated stat counters further down the page (`data-n` elements), just generalized to any element carrying the `.rv` class, plus the `.st` timeline container.
 
-| Placeholder | Location | Replace with |
-|---|---|---|
-| Calendly link | `data-url="https://calendly.com/frugaltesting/free-qa-consultation"` | Your real Calendly event URL |
-| Contact email | `hello@frugaltesting.com` (footer + fallback text) | Your real inbox |
-| Stats (`40–60%`, `<48 hrs`, etc.) | Hero card | Verified company metrics |
-| Testimonials | "Client Feedback" section | Real, approved client quotes |
-| Services list | `#services` | Confirm against your current service catalog |
-| Logo mark ("FT") | Header/footer | Swap for your actual logo asset if available |
+## Editing
 
-## Customizing
+- Brand colors, spacing, etc. are all CSS custom properties under `:root` (`--yl` is the accent yellow, `--fg`/`--b` the navy, `--c` the cream card background).
+- Services (`#sv`) and industries (`#in`) are rendered from the `S` array and the comma-separated industry string near the bottom `<script>` — edit those arrays rather than the HTML.
+- The booking widget is a self-built calendar (not Calendly) that hands off to a `mailto:` link with the chosen date/time pre-filled — no external booking service required.
 
-All styling is in a single `<style>` block at the top of `index.html` using CSS custom properties (`--teal`, `--navy`, etc.) — change brand colors in one place under `:root`.
+## Worth double-checking before this goes further
+
+This file was uploaded already filled in with real-looking specifics (client logos, case-study links, ISO certifications, a `frugaltestingid.com` contact address) — worth a final sanity pass to confirm every one of those is current and correct, since this session couldn't reach frugaltesting.com to cross-check them directly.
