@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lyzr Agentic AI Report</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14172b;--mute:#5b6178;--line:#e2e5f0;--brand:#5b3df5;--brand2:#18b6a4;--warn:#e8912d;--bad:#d64550;--soft:#eeeaff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1220;--card:#181c30;--ink:#eceefb;--mute:#9aa1c0;--line:#2a3050;--brand:#8b78ff;--brand2:#3fd3c0;--warn:#f0a548;--bad:#ef6a74;--soft:#251f4d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px 64px}
+header.hero{background:linear-gradient(135deg,#2b1a8f,#5b3df5 55%,#18b6a4);color:#fff;padding:56px 16px 48px}
+.hero .wrap{padding-bottom:0}
+.hero h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.15}
+.hero p{margin:0;max-width:680px;opacity:.92}
+.tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);padding:4px 10px;border-radius:99px;margin-bottom:14px}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav a{display:inline-block;padding:12px 14px;color:var(--mute);text-decoration:none;font-size:14px}
+nav a:hover{color:var(--brand)}
+section{margin-top:44px}
+h2{font-size:26px;margin:0 0 6px}
+h3{font-size:18px;margin:22px 0 8px}
+.lead{color:var(--mute);margin:0 0 18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h4{margin:0 0 6px;font-size:16px}
+.card p,.card li{color:var(--mute);font-size:14.5px;margin:0}
+.card ul{padding-left:18px;margin:6px 0 0}
+.kpi{text-align:center}.kpi b{display:block;font-size:30px;color:var(--brand)}.kpi span{color:var(--mute);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--soft);font-weight:600}
+.scroll{overflow-x:auto}
+.yes{color:var(--brand2);font-weight:600}.part{color:var(--warn);font-weight:600}.no{color:var(--bad);font-weight:600}
+.note{border-left:4px solid var(--warn);background:var(--card);padding:12px 16px;border-radius:8px;font-size:14px;color:var(--mute);margin:16px 0}
+.note b{color:var(--ink)}
+figure{margin:14px 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+figcaption{color:var(--mute);font-size:13px;margin-top:6px}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--ink);font-family:inherit}
+.box{fill:var(--soft);stroke:var(--brand);stroke-width:1.4}
+.box2{fill:var(--card);stroke:var(--brand2);stroke-width:1.4}
+.box3{fill:var(--card);stroke:var(--line);stroke-width:1.4}
+.arr{stroke:var(--mute);stroke-width:1.6;fill:none}
+.sm{font-size:12px;fill:var(--mute)!important}
+footer{margin-top:50px;color:var(--mute);font-size:13px}
+footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<span class="tag">Research report · October 2026</span>
+<h1>Lyzr: Agentic AI Services, Differentiation &amp; Use Cases</h1>
+<p>What Lyzr sells, how it differs from agent frameworks (LangChain, CrewAI) and enterprise automation platforms (Workato, UnifyApps), and where agentic AI pays off.</p>
+</div></header>
+<nav><div class="wrap">
+<a href="#summary">Summary</a><a href="#services">Services</a><a href="#arch">Architecture</a><a href="#diff">Differentiation</a><a href="#compare">Comparison</a><a href="#price">Pricing</a><a href="#usecases">Use cases</a><a href="#ft">For Frugal Testing</a><a href="#sources">Sources &amp; limits</a>
+</div></nav>
+
+<div class="wrap">
+
+<section id="summary">
+<h2>Executive summary</h2>
+<p class="lead">Lyzr positions itself as an "Agentic Operating System" for enterprises: build agents quickly, then govern, secure and deploy them anywhere, including air-gapped hardware.</p>
+<div class="grid">
+<div class="card kpi"><b>500+</b><span>enterprise customers (per Lyzr)</span></div>
+<div class="card kpi"><b>1,000+</b><span>agents live in production</span></div>
+<div class="card kpi"><b>$8M</b><span>Series A (Rocketship.vc, Accenture Ventures and others)</span></div>
+<div class="card kpi"><b>$0 → custom</b><span>Free tier up to enterprise quote</span></div>
+</div>
+<div class="note"><b>Bottom line.</b> Lyzr's edge is the <em>governed, full-stack, deploy-anywhere</em> agent layer with built-in Responsible AI. Frameworks like LangChain/CrewAI give more developer flexibility but leave governance to you. Workato/UnifyApps are broader automation/integration platforms with agents on top.</div>
+</section>
+
+<section id="services">
+<h2>What Lyzr provides</h2>
+<p class="lead">Product lines as described on lyzr.ai and in search-indexed Lyzr pages and docs.</p>
+<div class="grid">
+<div class="card"><h4>Lyzr Agent Studio</h4><p>Low/no-code builder to compose, prompt and ship agents; 100–200+ pre-built agent blueprints for banking, sales, marketing and more; knowledge bases (RAG), tools, orchestration.</p></div>
+<div class="card"><h4>Architect</h4><p>Agentic app builder: go from a single prompt to a working application with visual orchestration.</p></div>
+<div class="card"><h4>Agents as a Service</h4><p>Custom, managed enterprise agents built and operated by Lyzr.</p></div>
+<div class="card"><h4>Orchestration as a Service</h4><p>Coordination layer for multi-agent workflows.</p></div>
+<div class="card"><h4>Cognis memory</h4><p>Persistent agent context across sessions.</p></div>
+<div class="card"><h4>Control Plane (OpenController)</h4><p>Framework-agnostic governance: registers agents built on LangChain, CrewAI, AWS, Azure or custom code; controls who can run, spend and access, with audit trail.</p></div>
+<div class="card"><h4>Responsible AI layer</h4><p>Native fairness, bias and toxicity checks, automatic PII redaction, Hallucination Manager and Agent Eval (enterprise plan).</p></div>
+<div class="card"><h4>Sovereign AI &amp; Optimus</h4><p>On-prem, hybrid and VPC deployment. Optimus is an air-gapped 4U server (6× NVIDIA L40S, 288 GB GPU memory) for government, defense and regulated finance.</p></div>
+<div class="card"><h4>Industry agents</h4><p>Packaged banking and financial-services agents (fraud, compliance, underwriting, claims, service).</p></div>
+</div>
+</section>
+
+<section id="arch">
+<h2>How the platform fits together</h2>
+<p class="lead">Flowcharts for the Lyzr stack and the build-to-production path.</p>
+
+<figure>
+<svg viewBox="0 0 900 400" role="img" aria-label="Lyzr layered architecture">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
+<rect class="box3" x="20" y="14" width="860" height="56" rx="10"/><text x="450" y="38" text-anchor="middle" font-weight="600">Channels &amp; users</text><text class="sm" x="450" y="58" text-anchor="middle">Web apps · Slack/Teams · APIs · internal tools · customer-facing apps</text>
+<rect class="box" x="20" y="86" width="860" height="70" rx="10"/><text x="450" y="112" text-anchor="middle" font-weight="600">Build layer</text><text class="sm" x="450" y="134" text-anchor="middle">Agent Studio · Architect · pre-built blueprints · Agents/Orchestration as a Service</text>
+<rect class="box2" x="20" y="172" width="420" height="80" rx="10"/><text x="230" y="200" text-anchor="middle" font-weight="600">Intelligence</text><text class="sm" x="230" y="222" text-anchor="middle">Any LLM · RAG knowledge bases · Cognis memory · tools</text>
+<rect class="box2" x="460" y="172" width="420" height="80" rx="10"/><text x="670" y="200" text-anchor="middle" font-weight="600">Governance</text><text class="sm" x="670" y="222" text-anchor="middle">Control Plane · Responsible AI · PII redaction · audit · evals</text>
+<rect class="box" x="20" y="268" width="860" height="56" rx="10"/><text x="450" y="292" text-anchor="middle" font-weight="600">Existing enterprise systems</text><text class="sm" x="450" y="312" text-anchor="middle">CRM · ERP · core banking · data warehouses · other agent frameworks</text>
+<rect class="box3" x="20" y="340" width="860" height="46" rx="10"/><text x="450" y="368" text-anchor="middle" font-weight="600">Deploy anywhere: SaaS · VPC · hybrid · on-prem · air-gapped (Optimus)</text>
+</svg>
+<figcaption>Layered view synthesized from Lyzr product pages; layer grouping is our simplification.</figcaption>
+</figure>
+
+<figure>
+<svg viewBox="0 0 900 150" role="img" aria-label="Agent lifecycle flow">
+<defs><marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
+<g font-size="13" text-anchor="middle">
+<rect class="box" x="10" y="40" width="120" height="60" rx="10"/><text x="70" y="66">Pick blueprint</text><text x="70" y="84" class="sm">or prompt Architect</text>
+<rect class="box" x="170" y="40" width="120" height="60" rx="10"/><text x="230" y="66">Connect data</text><text x="230" y="84" class="sm">RAG + tools</text>
+<rect class="box" x="330" y="40" width="120" height="60" rx="10"/><text x="390" y="66">Add guardrails</text><text x="390" y="84" class="sm">RAI, PII, evals</text>
+<rect class="box" x="490" y="40" width="120" height="60" rx="10"/><text x="550" y="66">Test / simulate</text><text x="550" y="84" class="sm">hallucination checks</text>
+<rect class="box2" x="650" y="40" width="110" height="60" rx="10"/><text x="705" y="66">Deploy</text><text x="705" y="84" class="sm">cloud / VPC / on-prem</text>
+<rect class="box2" x="790" y="40" width="100" height="60" rx="10"/><text x="840" y="66">Govern</text><text x="840" y="84" class="sm">audit, cost</text>
+</g>
+<g class="arr" marker-end="url(#b)"><path d="M130 70H168"/><path d="M290 70H328"/><path d="M450 70H488"/><path d="M610 70H648"/><path d="M760 70H788"/></g>
+</svg>
+<figcaption>Typical build → govern path (Lyzr describes agents deployable in under ~20 minutes for simple cases).</figcaption>
+</figure>
+</section>
+
+<section id="diff">
+<h2>How Lyzr is different</h2>
+<div class="grid">
+<div class="card"><h4>1. Governance built in</h4><p>LangChain, CrewAI and AutoGen require teams to build audit trails, cost controls and access policy themselves. Lyzr ships them (Control Plane, RAI).</p></div>
+<div class="card"><h4>2. Deploy anywhere, incl. air-gapped</h4><p>On-prem/VPC and the Optimus appliance suit regulated buyers. Workato is hosted-only per the reference doc.</p></div>
+<div class="card"><h4>3. Agent-native, not bolted on</h4><p>Agents are the core abstraction, unlike integration-first iPaaS tools that added AI later (Workato's Genies).</p></div>
+<div class="card"><h4>4. Framework-agnostic control</h4><p>The Control Plane can govern agents built elsewhere, so Lyzr can sit above existing investments.</p></div>
+<div class="card"><h4>5. Low-code to speed adoption</h4><p>Business-friendly studio and 100–200+ blueprints versus code-first frameworks.</p></div>
+<div class="card"><h4>6. Low entry cost</h4><p>Free and $19/$99 tiers allow trial before enterprise commitment, unlike demo-gated pricing from Workato and UnifyApps.</p></div>
+</div>
+<div class="note"><b>Trade-offs.</b> Developer-heavy teams may prefer the flexibility of LangChain/CrewAI. Lyzr's connector breadth (around 200 native tools) is far below Workato (14,000+ apps) or UnifyApps (950+ connectors). Many figures are vendor-reported.</div>
+</section>
+
+<section id="compare">
+<h2>Competitor comparison</h2>
+<p class="lead">Lyzr versus agent frameworks and enterprise automation platforms.</p>
+<div class="scroll"><table>
+<tr><th>Capability</th><th>Lyzr</th><th>LangChain / CrewAI</th><th>UnifyApps</th><th>Workato</th></tr>
+<tr><td>Core identity</td><td>Agentic OS + control plane</td><td>Developer frameworks</td><td>AI-first horizontal platform</td><td>iPaaS evolved into agent control plane</td></tr>
+<tr><td>Primary user</td><td>PMs, devs, CXOs</td><td>Engineers</td><td>CIO / enterprise IT</td><td>IT + business users</td></tr>
+<tr><td>Built-in governance &amp; RAI</td><td class="yes">Native</td><td class="no">Build yourself</td><td class="part">PII masking, RBAC, audit</td><td class="yes">RBAC, audit, strong compliance</td></tr>
+<tr><td>On-prem / air-gapped</td><td class="yes">Yes (Optimus)</td><td class="part">Self-host code</td><td class="yes">Own cloud / VPC / on-prem</td><td class="no">Hosted only</td></tr>
+<tr><td>Model-agnostic</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="yes">Yes</td><td class="part">Leading LLMs + MCP</td></tr>
+<tr><td>Integration breadth</td><td class="part">~200 native tools</td><td class="part">Via code / community</td><td class="yes">950+ connectors</td><td class="yes">14,000+ apps</td></tr>
+<tr><td>Low-code UI</td><td class="yes">Yes</td><td class="no">Mostly code</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+<tr><td>Pre-built agents</td><td class="yes">100–200+ blueprints</td><td class="part">Templates</td><td class="yes">4 agent types, 200+ automation templates</td><td class="yes">Genies (IT, HR, Sales…)</td></tr>
+<tr><td>Public entry pricing</td><td class="yes">Free / $19 / $99</td><td class="yes">Open source</td><td class="part">Demo-gated</td><td class="part">Demo-gated</td></tr>
+<tr><td>Best fit</td><td>Governed agents, regulated industries</td><td>Custom, flexible builds</td><td>Long-term AI stack ownership</td><td>Fast integration, compliance</td></tr>
+</table></div>
+<p class="sm" style="color:var(--mute);font-size:13px">Legend: <span class="yes">strong</span> · <span class="part">partial</span> · <span class="no">weak/absent</span>. UnifyApps and Workato columns draw on the shared reference doc; framework columns on third-party comparisons. Ratings are qualitative.</p>
+
+<figure>
+<svg viewBox="0 0 900 340" role="img" aria-label="Positioning map">
+<line x1="80" y1="300" x2="860" y2="300" class="arr"/><line x1="80" y1="300" x2="80" y2="20" class="arr"/>
+<text x="470" y="332" text-anchor="middle" class="sm">Integration / automation breadth →</text>
+<text transform="translate(26 160) rotate(-90)" text-anchor="middle" class="sm">Agent-native governance →</text>
+<circle cx="640" cy="90" r="46" fill="var(--brand)" opacity=".85"/><text x="640" y="95" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">Lyzr</text>
+<circle cx="760" cy="220" r="42" fill="var(--brand2)" opacity=".85"/><text x="760" y="225" text-anchor="middle" style="fill:#fff" font-weight="600">Workato</text>
+<circle cx="640" cy="200" r="40" fill="var(--warn)" opacity=".85"/><text x="640" y="205" text-anchor="middle" style="fill:#fff" font-weight="600">UnifyApps</text>
+<circle cx="250" cy="250" r="40" fill="var(--mute)" opacity=".7"/><text x="250" y="255" text-anchor="middle" style="fill:#fff" font-weight="600">LangChain</text>
+<circle cx="330" cy="170" r="36" fill="var(--mute)" opacity=".7"/><text x="330" y="175" text-anchor="middle" style="fill:#fff" font-weight="600">CrewAI</text>
+</svg>
+<figcaption>Illustrative positioning, not measured data. Placement is our qualitative judgement from the sources.</figcaption>
+</figure>
+</section>
+
+<section id="price">
+<h2>Pricing snapshot</h2>
+<p class="lead">Entry-level annual cost (USD, log-style scale to make the gap visible).</p>
+<figure>
+<svg viewBox="0 0 900 270" role="img" aria-label="Annual cost bar chart">
+<g font-size="13">
+<text x="10" y="40">Lyzr Community</text><rect x="210" y="26" width="2" height="20" fill="var(--brand)"/><text x="222" y="41" class="sm">$0</text>
+<text x="10" y="90">Lyzr Starter</text><rect x="210" y="76" width="70" height="20" rx="4" fill="var(--brand)"/><text x="290" y="91" class="sm">$228/yr ($19/mo)</text>
+<text x="10" y="140">Lyzr Pro</text><rect x="210" y="126" width="110" height="20" rx="4" fill="var(--brand)"/><text x="330" y="141" class="sm">$948–1,188/yr ($79–99/mo)</text>
+<text x="10" y="190">Workato (Vendr est.)</text><rect x="210" y="176" width="380" height="20" rx="4" fill="var(--brand2)"/><text x="600" y="191" class="sm">~$60k–$128k/yr</text>
+<text x="10" y="240">UnifyApps (AWS list)</text><rect x="210" y="226" width="440" height="20" rx="4" fill="var(--warn)"/><text x="660" y="241" class="sm">$100k platform credits/yr</text>
+</g>
+</svg>
+<figcaption>Bar lengths are logarithmic and not to linear scale. Lyzr tiers from public plans pages; Workato from Vendr benchmarks and UnifyApps from its AWS listing, both quoted in the reference doc and not vendor-confirmed. Lyzr Enterprise is custom-quoted, so this is not like-for-like.</figcaption>
+</figure>
+</section>
+
+<section id="usecases">
+<h2>Agentic AI use cases</h2>
+<div class="grid">
+<div class="card"><h4>Banking &amp; fintech</h4><ul><li>Fraud detection</li><li>Compliance monitoring</li><li>Underwriting support</li><li>Customer service</li></ul></div>
+<div class="card"><h4>Insurance</h4><ul><li>Claims processing</li><li>Risk assessment</li><li>Policy Q&amp;A</li></ul></div>
+<div class="card"><h4>Sales &amp; marketing</h4><ul><li>Lead qualification and outreach</li><li>Content generation</li><li>Campaign reporting</li></ul></div>
+<div class="card"><h4>Operations &amp; IT</h4><ul><li>Ticket triage</li><li>Internal knowledge assistants</li><li>Process automation</li></ul></div>
+<div class="card"><h4>Finance &amp; HR</h4><ul><li>Invoice extraction</li><li>Payroll validation</li><li>Leave &amp; onboarding bots</li></ul></div>
+<div class="card"><h4>Secure / sovereign</h4><ul><li>Defense and government</li><li>Regulated data, air-gapped</li></ul></div>
+</div>
+
+<h3>Example flow: governed claims agent</h3>
+<figure>
+<svg viewBox="0 0 900 190" role="img" aria-label="Claims agent flowchart">
+<defs><marker id="c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
+<g font-size="13" text-anchor="middle">
+<rect class="box" x="10" y="60" width="120" height="56" rx="10"/><text x="70" y="93">Claim received</text>
+<rect class="box" x="170" y="60" width="130" height="56" rx="10"/><text x="235" y="86">Extract &amp; redact</text><text x="235" y="103" class="sm">PII masking</text>
+<rect class="box2" x="340" y="60" width="130" height="56" rx="10"/><text x="405" y="86">Agent assesses</text><text x="405" y="103" class="sm">policy RAG</text>
+<polygon points="560,40 630,88 560,136 490,88" class="box3"/><text x="560" y="86">Risk</text><text x="560" y="102">high?</text>
+<rect class="box" x="680" y="14" width="130" height="50" rx="10"/><text x="745" y="44">Human review</text>
+<rect class="box2" x="680" y="112" width="130" height="50" rx="10"/><text x="745" y="142">Auto-approve</text>
+<rect class="box" x="830" y="60" width="64" height="56" rx="10"/><text x="862" y="84">Audit</text><text x="862" y="100">log</text>
+</g>
+<g class="arr" marker-end="url(#c)"><path d="M130 88H168"/><path d="M300 88H338"/><path d="M470 88H488"/><path d="M600 66L680 40"/><path d="M600 110L680 136"/><path d="M810 40L850 60"/><path d="M810 136L850 116"/></g>
+<text x="635" y="48" class="sm">yes</text><text x="635" y="136" class="sm">no</text>
+</svg>
+<figcaption>Illustrative pattern combining Lyzr's RAG, Responsible AI redaction, human-in-loop and audit features.</figcaption>
+</figure>
+</section>
+
+<section id="ft">
+<h2>Relevance to Frugal Testing</h2>
+<p class="lead">The reference doc evaluates UnifyApps and Workato. Lyzr is a third candidate in the same category.</p>
+<div class="grid">
+<div class="card"><h4>Fits well</h4><ul><li>AI lead qualification from HubSpot data</li><li>Finance/HR email-to-sheet agents (the doc's Day 5 flows)</li><li>Client reporting agents over Jenkins/Jira/New Relic data</li><li>Embedding governed AI into the FrugalTest product</li></ul></div>
+<div class="card"><h4>Not a replacement for</h4><ul><li>Selenium, Appium, JMeter, Postman, Karate, Jenkins</li></ul><p style="margin-top:8px">Like the other platforms, Lyzr sits above the test stack and does not execute tests.</p></div>
+<div class="card"><h4>Suggested next step</h4><ul><li>Pilot the free/Pro tier on one workflow (e.g. lead scoring)</li><li>Compare against the Workato pilot recommended in the doc</li><li>Check connector coverage for Jira, Jenkins and New Relic</li></ul></div>
+</div>
+</section>
+
+<section id="sources">
+<h2>Sources &amp; limitations</h2>
+<div class="note"><b>Please read.</b> The environment blocked direct access to lyzr.ai and youtube.com, so I could not read the five YouTube videos or fetch the homepage directly. I used search-indexed content from Lyzr's own pages and third-party sites, plus the Google Doc you shared. Only two of your videos were identified by title: <i>Lyzr Studio Walkthrough</i> (8NVSziCLzyc) and <i>How to Build AI Agents in Under 5 Minutes with Lyzr + Lovable</i> (Pz59CMdkBWk), and I saw their titles only, not their contents. The other three videos (btOBqAJWFT8, ldETapkr8Hg, NwmG-jPZu-g) are not reflected here. Send transcripts or allow the domains if you want them folded in. Customer counts, speeds and ROI are vendor claims.</div>
+<ul>
+<li><a href="https://www.lyzr.ai/">lyzr.ai</a>, <a href="https://www.lyzr.ai/sovereign-ai/">Sovereign AI</a>, <a href="https://www.lyzr.ai/lyzr-agent-studio/">Agent Studio</a>, <a href="https://www.lyzr.ai/opencontroller/">OpenController</a>, <a href="https://www.lyzr.ai/agents-as-a-service/">Agents as a Service</a></li>
+<li><a href="https://www.lyzr.ai/blog/lyzr-raising-series-a/">Series A announcement</a>, <a href="https://www.lyzr.ai/compare/lyzr-agent-studio-vs-crewai/">Lyzr vs CrewAI</a>, <a href="https://www.lyzr.ai/blog/langchain-alternative/">LangChain alternative</a></li>
+<li><a href="https://docs.lyzr.ai/introduction/plans">Lyzr plans &amp; pricing</a></li>
+<li><a href="https://atlan.com/know/ai-agents-frameworks-compared/">Atlan: agent frameworks compared</a></li>
+<li><a href="https://www.youtube.com/watch?v=8NVSziCLzyc">Video: Studio Walkthrough</a>, <a href="https://www.youtube.com/watch?v=Pz59CMdkBWk">Video: Lyzr + Lovable</a></li>
+<li>Reference doc: UnifyApps &amp; Workato POC (Google Doc, Frugal Testing internal)</li>
+</ul>
+</section>
+<footer>Prepared 5 Oct 2026. Charts and positioning are illustrative.</footer>
+</div>
+</body>
+</html>
