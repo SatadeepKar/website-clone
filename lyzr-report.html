@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lyzr Agentic AI Report</title>
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--ink:#14172b;--mute:#5b6178;--line:#e2e5f0;--brand:#5b3df5;--brand2:#18b6a4;--warn:#e8912d;--bad:#d64550;--soft:#eeeaff}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1220;--card:#181c30;--ink:#eceefb;--mute:#9aa1c0;--line:#2a3050;--brand:#8b78ff;--brand2:#3fd3c0;--warn:#f0a548;--bad:#ef6a74;--soft:#251f4d}}
+:root{color-scheme:light;--bg:#ffffff;--card:#fff;--ink:#14172b;--mute:#5b6178;--line:#e2e5f0;--brand:#5b3df5;--brand2:#18b6a4;--warn:#e8912d;--bad:#d64550;--soft:#ece8ff}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px 64px}
@@ -15,7 +9,8 @@ header.hero{background:linear-gradient(135deg,#2b1a8f,#5b3df5 55%,#18b6a4);color
 .hero h1{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.15}
 .hero p{margin:0;max-width:680px;opacity:.92}
 .tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.18);padding:4px 10px;border-radius:99px;margin-bottom:14px}
-nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav .wrap{padding-bottom:0}
 nav a{display:inline-block;padding:12px 14px;color:var(--mute);text-decoration:none;font-size:14px}
 nav a:hover{color:var(--brand)}
 section{margin-top:44px}
@@ -46,9 +41,27 @@ svg text{fill:var(--ink);font-family:inherit}
 .sm{font-size:12px;fill:var(--mute)!important}
 footer{margin-top:50px;color:var(--mute);font-size:13px}
 footer a{color:var(--brand)}
+
+section{--sc:#5b3df5;background:color-mix(in srgb,var(--sc) 7%,#fff);border-radius:20px;padding:26px 22px;border:1px solid color-mix(in srgb,var(--sc) 22%,#fff)}
+#summary{--sc:#5b3df5}#services{--sc:#2f7de1}#arch{--sc:#12a594}#diff{--sc:#e8812d}#compare{--sc:#d6409f}#price{--sc:#2e9e5b}#usecases{--sc:#c9a014}#ft{--sc:#7a4de0}#sources{--sc:#5b6178}
+h2{display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:6px;height:26px;border-radius:3px;background:var(--sc);flex:none}
+.card{border-top:3px solid var(--sc);box-shadow:0 1px 2px rgba(20,23,43,.05)}
+.kpi b{color:var(--sc)}
+th{background:color-mix(in srgb,var(--sc) 14%,#fff)}
+nav a:hover{color:var(--ink);box-shadow:inset 0 -3px 0 var(--brand)}
+.hi{cursor:pointer;outline:none;transition:opacity .35s,filter .35s,transform .35s;transform-box:fill-box;transform-origin:center}
+figure.live .hi{opacity:.5}
+figure.live .hi.on{opacity:1;filter:drop-shadow(0 5px 10px rgba(91,61,245,.4));transform:scale(1.025)}
+.hi.on rect,.hi.on polygon,.hi.on circle{stroke:var(--brand);stroke-width:3}
+.hi:focus-visible rect,.hi:focus-visible circle{stroke:var(--brand);stroke-width:3}
+.bar{transform-box:fill-box;transform-origin:left center;animation:grow 1.1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}}
+.hint{font-size:12px;color:var(--mute);margin:0 0 6px}
+@media (prefers-reduced-motion:reduce){.bar{animation:none}.hi{transition:none}}
+@media (max-width:520px){section{padding:20px 14px}}
 </style>
-</head>
-<body>
+
 <header class="hero"><div class="wrap">
 <span class="tag">Research report · October 2026</span>
 <h1>Lyzr: Agentic AI Services, Differentiation &amp; Use Cases</h1>
@@ -92,30 +105,30 @@ footer a{color:var(--brand)}
 <h2>How the platform fits together</h2>
 <p class="lead">Flowcharts for the Lyzr stack and the build-to-production path.</p>
 
-<figure>
+<figure class="hl"><p class="hint">Hover, tap or tab to highlight any element. It also cycles automatically.</p>
 <svg viewBox="0 0 900 400" role="img" aria-label="Lyzr layered architecture">
 <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
-<rect class="box3" x="20" y="14" width="860" height="56" rx="10"/><text x="450" y="38" text-anchor="middle" font-weight="600">Channels &amp; users</text><text class="sm" x="450" y="58" text-anchor="middle">Web apps · Slack/Teams · APIs · internal tools · customer-facing apps</text>
-<rect class="box" x="20" y="86" width="860" height="70" rx="10"/><text x="450" y="112" text-anchor="middle" font-weight="600">Build layer</text><text class="sm" x="450" y="134" text-anchor="middle">Agent Studio · Architect · pre-built blueprints · Agents/Orchestration as a Service</text>
-<rect class="box2" x="20" y="172" width="420" height="80" rx="10"/><text x="230" y="200" text-anchor="middle" font-weight="600">Intelligence</text><text class="sm" x="230" y="222" text-anchor="middle">Any LLM · RAG knowledge bases · Cognis memory · tools</text>
-<rect class="box2" x="460" y="172" width="420" height="80" rx="10"/><text x="670" y="200" text-anchor="middle" font-weight="600">Governance</text><text class="sm" x="670" y="222" text-anchor="middle">Control Plane · Responsible AI · PII redaction · audit · evals</text>
-<rect class="box" x="20" y="268" width="860" height="56" rx="10"/><text x="450" y="292" text-anchor="middle" font-weight="600">Existing enterprise systems</text><text class="sm" x="450" y="312" text-anchor="middle">CRM · ERP · core banking · data warehouses · other agent frameworks</text>
-<rect class="box3" x="20" y="340" width="860" height="46" rx="10"/><text x="450" y="368" text-anchor="middle" font-weight="600">Deploy anywhere: SaaS · VPC · hybrid · on-prem · air-gapped (Optimus)</text>
-</svg>
+<g class="hi" tabindex="0"><rect class="box3" x="20" y="14" width="860" height="56" rx="10"/><text x="450" y="38" text-anchor="middle" font-weight="600">Channels &amp; users</text><text class="sm" x="450" y="58" text-anchor="middle">Web apps · Slack/Teams · APIs · internal tools · customer-facing apps</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="20" y="86" width="860" height="70" rx="10"/><text x="450" y="112" text-anchor="middle" font-weight="600">Build layer</text><text class="sm" x="450" y="134" text-anchor="middle">Agent Studio · Architect · pre-built blueprints · Agents/Orchestration as a Service</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="20" y="172" width="420" height="80" rx="10"/><text x="230" y="200" text-anchor="middle" font-weight="600">Intelligence</text><text class="sm" x="230" y="222" text-anchor="middle">Any LLM · RAG knowledge bases · Cognis memory · tools</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="460" y="172" width="420" height="80" rx="10"/><text x="670" y="200" text-anchor="middle" font-weight="600">Governance</text><text class="sm" x="670" y="222" text-anchor="middle">Control Plane · Responsible AI · PII redaction · audit · evals</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="20" y="268" width="860" height="56" rx="10"/><text x="450" y="292" text-anchor="middle" font-weight="600">Existing enterprise systems</text><text class="sm" x="450" y="312" text-anchor="middle">CRM · ERP · core banking · data warehouses · other agent frameworks</text>
+</g><g class="hi" tabindex="0"><rect class="box3" x="20" y="340" width="860" height="46" rx="10"/><text x="450" y="368" text-anchor="middle" font-weight="600">Deploy anywhere: SaaS · VPC · hybrid · on-prem · air-gapped (Optimus)</text>
+</g></svg>
 <figcaption>Layered view synthesized from Lyzr product pages; layer grouping is our simplification.</figcaption>
 </figure>
 
-<figure>
+<figure class="hl"><p class="hint">Hover, tap or tab to highlight any element. It also cycles automatically.</p>
 <svg viewBox="0 0 900 150" role="img" aria-label="Agent lifecycle flow">
 <defs><marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
 <g font-size="13" text-anchor="middle">
-<rect class="box" x="10" y="40" width="120" height="60" rx="10"/><text x="70" y="66">Pick blueprint</text><text x="70" y="84" class="sm">or prompt Architect</text>
-<rect class="box" x="170" y="40" width="120" height="60" rx="10"/><text x="230" y="66">Connect data</text><text x="230" y="84" class="sm">RAG + tools</text>
-<rect class="box" x="330" y="40" width="120" height="60" rx="10"/><text x="390" y="66">Add guardrails</text><text x="390" y="84" class="sm">RAI, PII, evals</text>
-<rect class="box" x="490" y="40" width="120" height="60" rx="10"/><text x="550" y="66">Test / simulate</text><text x="550" y="84" class="sm">hallucination checks</text>
-<rect class="box2" x="650" y="40" width="110" height="60" rx="10"/><text x="705" y="66">Deploy</text><text x="705" y="84" class="sm">cloud / VPC / on-prem</text>
-<rect class="box2" x="790" y="40" width="100" height="60" rx="10"/><text x="840" y="66">Govern</text><text x="840" y="84" class="sm">audit, cost</text>
-</g>
+<g class="hi" tabindex="0"><rect class="box" x="10" y="40" width="120" height="60" rx="10"/><text x="70" y="66">Pick blueprint</text><text x="70" y="84" class="sm">or prompt Architect</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="170" y="40" width="120" height="60" rx="10"/><text x="230" y="66">Connect data</text><text x="230" y="84" class="sm">RAG + tools</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="330" y="40" width="120" height="60" rx="10"/><text x="390" y="66">Add guardrails</text><text x="390" y="84" class="sm">RAI, PII, evals</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="490" y="40" width="120" height="60" rx="10"/><text x="550" y="66">Test / simulate</text><text x="550" y="84" class="sm">hallucination checks</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="650" y="40" width="110" height="60" rx="10"/><text x="705" y="66">Deploy</text><text x="705" y="84" class="sm">cloud / VPC / on-prem</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="790" y="40" width="100" height="60" rx="10"/><text x="840" y="66">Govern</text><text x="840" y="84" class="sm">audit, cost</text>
+</g></g>
 <g class="arr" marker-end="url(#b)"><path d="M130 70H168"/><path d="M290 70H328"/><path d="M450 70H488"/><path d="M610 70H648"/><path d="M760 70H788"/></g>
 </svg>
 <figcaption>Typical build → govern path (Lyzr describes agents deployable in under ~20 minutes for simple cases).</figcaption>
@@ -153,17 +166,17 @@ footer a{color:var(--brand)}
 </table></div>
 <p class="sm" style="color:var(--mute);font-size:13px">Legend: <span class="yes">strong</span> · <span class="part">partial</span> · <span class="no">weak/absent</span>. UnifyApps and Workato columns draw on the shared reference doc; framework columns on third-party comparisons. Ratings are qualitative.</p>
 
-<figure>
+<figure class="hl"><p class="hint">Hover, tap or tab to highlight any element. It also cycles automatically.</p>
 <svg viewBox="0 0 900 340" role="img" aria-label="Positioning map">
 <line x1="80" y1="300" x2="860" y2="300" class="arr"/><line x1="80" y1="300" x2="80" y2="20" class="arr"/>
 <text x="470" y="332" text-anchor="middle" class="sm">Integration / automation breadth →</text>
 <text transform="translate(26 160) rotate(-90)" text-anchor="middle" class="sm">Agent-native governance →</text>
-<circle cx="640" cy="90" r="46" fill="var(--brand)" opacity=".85"/><text x="640" y="95" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">Lyzr</text>
-<circle cx="760" cy="220" r="42" fill="var(--brand2)" opacity=".85"/><text x="760" y="225" text-anchor="middle" style="fill:#fff" font-weight="600">Workato</text>
-<circle cx="640" cy="200" r="40" fill="var(--warn)" opacity=".85"/><text x="640" y="205" text-anchor="middle" style="fill:#fff" font-weight="600">UnifyApps</text>
-<circle cx="250" cy="250" r="40" fill="var(--mute)" opacity=".7"/><text x="250" y="255" text-anchor="middle" style="fill:#fff" font-weight="600">LangChain</text>
-<circle cx="330" cy="170" r="36" fill="var(--mute)" opacity=".7"/><text x="330" y="175" text-anchor="middle" style="fill:#fff" font-weight="600">CrewAI</text>
-</svg>
+<g class="hi" tabindex="0"><circle cx="640" cy="90" r="46" fill="var(--brand)" opacity=".85"/><text x="640" y="95" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">Lyzr</text>
+</g><g class="hi" tabindex="0"><circle cx="760" cy="220" r="42" fill="var(--brand2)" opacity=".85"/><text x="760" y="225" text-anchor="middle" style="fill:#fff" font-weight="600">Workato</text>
+</g><g class="hi" tabindex="0"><circle cx="640" cy="200" r="40" fill="var(--warn)" opacity=".85"/><text x="640" y="205" text-anchor="middle" style="fill:#fff" font-weight="600">UnifyApps</text>
+</g><g class="hi" tabindex="0"><circle cx="250" cy="250" r="40" fill="var(--mute)" opacity=".7"/><text x="250" y="255" text-anchor="middle" style="fill:#fff" font-weight="600">LangChain</text>
+</g><g class="hi" tabindex="0"><circle cx="330" cy="170" r="36" fill="var(--mute)" opacity=".7"/><text x="330" y="175" text-anchor="middle" style="fill:#fff" font-weight="600">CrewAI</text>
+</g></svg>
 <figcaption>Illustrative positioning, not measured data. Placement is our qualitative judgement from the sources.</figcaption>
 </figure>
 </section>
@@ -171,14 +184,14 @@ footer a{color:var(--brand)}
 <section id="price">
 <h2>Pricing snapshot</h2>
 <p class="lead">Entry-level annual cost (USD, log-style scale to make the gap visible).</p>
-<figure>
+<figure class="hl"><p class="hint">Hover, tap or tab to highlight any element. It also cycles automatically.</p>
 <svg viewBox="0 0 900 270" role="img" aria-label="Annual cost bar chart">
 <g font-size="13">
-<text x="10" y="40">Lyzr Community</text><rect x="210" y="26" width="2" height="20" fill="var(--brand)"/><text x="222" y="41" class="sm">$0</text>
-<text x="10" y="90">Lyzr Starter</text><rect x="210" y="76" width="70" height="20" rx="4" fill="var(--brand)"/><text x="290" y="91" class="sm">$228/yr ($19/mo)</text>
-<text x="10" y="140">Lyzr Pro</text><rect x="210" y="126" width="110" height="20" rx="4" fill="var(--brand)"/><text x="330" y="141" class="sm">$948–1,188/yr ($79–99/mo)</text>
-<text x="10" y="190">Workato (Vendr est.)</text><rect x="210" y="176" width="380" height="20" rx="4" fill="var(--brand2)"/><text x="600" y="191" class="sm">~$60k–$128k/yr</text>
-<text x="10" y="240">UnifyApps (AWS list)</text><rect x="210" y="226" width="440" height="20" rx="4" fill="var(--warn)"/><text x="660" y="241" class="sm">$100k platform credits/yr</text>
+<g class="hi" tabindex="0"><text x="10" y="40">Lyzr Community</text><rect class="bar" x="210" y="26" width="2" height="20" fill="#5b3df5"/><text x="222" y="41" class="sm">$0</text></g>
+<g class="hi" tabindex="0"><text x="10" y="90">Lyzr Starter</text><rect class="bar" x="210" y="76" width="70" height="20" rx="4" fill="#7b66ff"/><text x="290" y="91" class="sm">$228/yr ($19/mo)</text></g>
+<g class="hi" tabindex="0"><text x="10" y="140">Lyzr Pro</text><rect class="bar" x="210" y="126" width="110" height="20" rx="4" fill="#9b8bff"/><text x="330" y="141" class="sm">$948–1,188/yr ($79–99/mo)</text></g>
+<g class="hi" tabindex="0"><text x="10" y="190">Workato (Vendr est.)</text><rect class="bar" x="210" y="176" width="380" height="20" rx="4" fill="#18b6a4"/><text x="600" y="191" class="sm">~$60k–$128k/yr</text></g>
+<g class="hi" tabindex="0"><text x="10" y="240">UnifyApps (AWS list)</text><rect class="bar" x="210" y="226" width="440" height="20" rx="4" fill="#e8912d"/><text x="660" y="241" class="sm">$100k platform credits/yr</text></g>
 </g>
 </svg>
 <figcaption>Bar lengths are logarithmic and not to linear scale. Lyzr tiers from public plans pages; Workato from Vendr benchmarks and UnifyApps from its AWS listing, both quoted in the reference doc and not vendor-confirmed. Lyzr Enterprise is custom-quoted, so this is not like-for-like.</figcaption>
@@ -197,18 +210,18 @@ footer a{color:var(--brand)}
 </div>
 
 <h3>Example flow: governed claims agent</h3>
-<figure>
+<figure class="hl"><p class="hint">Hover, tap or tab to highlight any element. It also cycles automatically.</p>
 <svg viewBox="0 0 900 190" role="img" aria-label="Claims agent flowchart">
 <defs><marker id="c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--mute)"/></marker></defs>
 <g font-size="13" text-anchor="middle">
-<rect class="box" x="10" y="60" width="120" height="56" rx="10"/><text x="70" y="93">Claim received</text>
-<rect class="box" x="170" y="60" width="130" height="56" rx="10"/><text x="235" y="86">Extract &amp; redact</text><text x="235" y="103" class="sm">PII masking</text>
-<rect class="box2" x="340" y="60" width="130" height="56" rx="10"/><text x="405" y="86">Agent assesses</text><text x="405" y="103" class="sm">policy RAG</text>
-<polygon points="560,40 630,88 560,136 490,88" class="box3"/><text x="560" y="86">Risk</text><text x="560" y="102">high?</text>
-<rect class="box" x="680" y="14" width="130" height="50" rx="10"/><text x="745" y="44">Human review</text>
-<rect class="box2" x="680" y="112" width="130" height="50" rx="10"/><text x="745" y="142">Auto-approve</text>
-<rect class="box" x="830" y="60" width="64" height="56" rx="10"/><text x="862" y="84">Audit</text><text x="862" y="100">log</text>
-</g>
+<g class="hi" tabindex="0"><rect class="box" x="10" y="60" width="120" height="56" rx="10"/><text x="70" y="93">Claim received</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="170" y="60" width="130" height="56" rx="10"/><text x="235" y="86">Extract &amp; redact</text><text x="235" y="103" class="sm">PII masking</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="340" y="60" width="130" height="56" rx="10"/><text x="405" y="86">Agent assesses</text><text x="405" y="103" class="sm">policy RAG</text>
+</g><g class="hi" tabindex="0"><polygon points="560,40 630,88 560,136 490,88" class="box3"/><text x="560" y="86">Risk</text><text x="560" y="102">high?</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="680" y="14" width="130" height="50" rx="10"/><text x="745" y="44">Human review</text>
+</g><g class="hi" tabindex="0"><rect class="box2" x="680" y="112" width="130" height="50" rx="10"/><text x="745" y="142">Auto-approve</text>
+</g><g class="hi" tabindex="0"><rect class="box" x="830" y="60" width="64" height="56" rx="10"/><text x="862" y="84">Audit</text><text x="862" y="100">log</text>
+</g></g>
 <g class="arr" marker-end="url(#c)"><path d="M130 88H168"/><path d="M300 88H338"/><path d="M470 88H488"/><path d="M600 66L680 40"/><path d="M600 110L680 136"/><path d="M810 40L850 60"/><path d="M810 136L850 116"/></g>
 <text x="635" y="48" class="sm">yes</text><text x="635" y="136" class="sm">no</text>
 </svg>
@@ -240,5 +253,33 @@ footer a{color:var(--brand)}
 </section>
 <footer>Prepared 5 Oct 2026. Charts and positioning are illustrative.</footer>
 </div>
-</body>
-</html>
+<script>
+(function(){
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('figure.hl').forEach(function(f,fi){
+  var items=[].slice.call(f.querySelectorAll('.hi')),cur=-1,paused=false,t;
+  if(!items.length)return;
+  function show(i){items.forEach(function(e,k){e.classList.toggle('on',k===i)});f.classList.add('live');cur=i}
+  function clear(){items.forEach(function(e){e.classList.remove('on')});f.classList.remove('live')}
+  items.forEach(function(e,i){
+    e.addEventListener('mouseenter',function(){paused=true;show(i)});
+    e.addEventListener('focus',function(){paused=true;show(i)});
+    e.addEventListener('click',function(){paused=true;show(i)});
+    e.addEventListener('mouseleave',function(){paused=false});
+    e.addEventListener('blur',function(){paused=false});
+  });
+  f.addEventListener('mouseleave',function(){paused=false});
+  if(rm)return;
+  var seen=false;
+  function tick(){if(!paused&&seen)show((cur+1)%items.length)}
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(x){
+      seen=x.isIntersecting;
+      if(seen&&cur<0)show(0);
+      if(!seen)clear();
+    })},{threshold:.4}).observe(f);
+  }else seen=true;
+  setInterval(tick,1700+fi*40);
+});
+})();
+</script>
